@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="facebook_provider_id">facebook.com</string>
+    <string name="facebook_app_id">1335539829869377</string>
+</resources>

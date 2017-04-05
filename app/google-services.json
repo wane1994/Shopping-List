@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "5110116754",
+    "firebase_url": "https://shopping-list-6c5ba.firebaseio.com",
+    "project_id": "shopping-list-6c5ba",
+    "storage_bucket": "shopping-list-6c5ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5110116754:android:d56ad5a72b6be06d",
+        "android_client_info": {
+          "package_name": "fi.aalto.msp2017.shoppinglist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5110116754-psp7su2sul56cs9qr9orh8atgphl271o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK8Aqa1TFMOhJJPxwr9A8pRYuamlBDvFg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
