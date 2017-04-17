@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#dbfdfa"
+    tools:context="fi.aalto.msp2017.shoppinglist.SignUpActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:text="LOGO" />
+
+    <LinearLayout
+        android:id="@+id/layoutSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/etSignupEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:background="@drawable/etfields"
+            android:padding="10dp"
+            android:hint="Email"/>
+
+        <EditText
+            android:id="@+id/etSignupPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:background="@drawable/etfields"
+            android:padding="10dp"
+            android:hint="Password"/>
+
+        <EditText
+            android:id="@+id/etSignupFirstname"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@drawable/etfields"
+            android:padding="10dp"
+            android:hint="First name"/>
+
+        <EditText
+            android:id="@+id/etSignupLastname"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@drawable/etfields"
+            android:padding="10dp"
+            android:hint="Last name"/>
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/buttons"
+            android:textColor="#000000"
+            android:text="Sign Up"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

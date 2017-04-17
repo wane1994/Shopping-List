@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_6c166b47f87c0ab0cbe5e8be934015875dbc7981/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
         jumboMode="true"
         optimize="true"
@@ -27,6 +36,15 @@
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_44146582fdc2e8458b5dfd5daa23c3e5f031d0a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.0.1_1a46f1ad3e68faddd7e09c469223f27d524f70ae/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,12 +75,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.21.0/jars/classes.jar"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="163a02912c05c6ffb9ba560f9ecc6f604fa9e455">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.21.0_58e0b8adcf817105c751845e3c75d3f832431f1c/classes.dex" />
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/tubesock-0.0.11_b47a3d1cac703044edce39b7497dd2a31671eaca/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -72,123 +90,6 @@
         revision="25.0.2"
         sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_a2c69fad01cad8d62280e4d3bb7cc638c487cbfb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_e5499ec9c6ff25f34d4ca543e50670c42be84ca9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8a372c4191f80489770a231f7be4820b204b886a">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_199edfd4049c3360cd211b2666d43ca5042d0b88/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.0.1_076e45ba25990f7156b0f01b36e8823984150ce8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.0.1_b82cb4b815157fccb05b8163744967c1e63c6fbd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.0.1_329f8e418fb7ec9c347bdc6e8a2ea3cec0042293/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_b34a1e269131aa83c96e57fa1ad1a767ee52ab2d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-databind-2.2.2_589a9f0c842d58e2e717d989adb326816a143ba9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="94ba691efc31bf53264db0716d9c9ec03843ea31">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-25.0.0_20f7f70b4198d500d177e87410e919efa1439656/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_299cd1b17d3128c5e50cf9a47e3f354489d7035d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.2.2_414fecd9eca5d3dbaa0e71fb6b0fd7c5f6c79964/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_6c166b47f87c0ab0cbe5e8be934015875dbc7981/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.0.1_1a46f1ad3e68faddd7e09c469223f27d524f70ae/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/tubesock-0.0.11_b47a3d1cac703044edce39b7497dd2a31671eaca/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -216,6 +117,33 @@
         revision="25.0.2"
         sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.0.1_a179c171e1d5513257937a25836b16204807ce7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_e5499ec9c6ff25f34d4ca543e50670c42be84ca9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_199edfd4049c3360cd211b2666d43ca5042d0b88/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.0.1_076e45ba25990f7156b0f01b36e8823984150ce8/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -264,6 +192,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.0.1_b82cb4b815157fccb05b8163744967c1e63c6fbd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -273,11 +210,29 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.0.1_329f8e418fb7ec9c347bdc6e8a2ea3cec0042293/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_b34a1e269131aa83c96e57fa1ad1a767ee52ab2d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5e534d9146bbc33fafcb0fee4ab4b3c11d2db190">
+        sha1="ca6cdc74700cdc87d401c40538c1e96ae71dd950">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_179dc965b6c0e6f07ef55f05c9caa93b956ef345/classes.dex" />
     </item>
     <item
@@ -286,8 +241,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0914b3046f283f09311ce9d7e1b1e3e0f3715342">
+        sha1="dc15a5c9e94867a5b734459c027821f7ef9caec9">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_29f52242012a0b8ef1682160249413ba6394f55d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-databind-2.2.2_589a9f0c842d58e2e717d989adb326816a143ba9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.21.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a70160a70685ce25bda1c6e094c73676a399039">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.21.1_c8a2b1a0ee50c5cc57a12f5a3844a667ef1a92a8/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -324,6 +297,42 @@
         revision="25.0.2"
         sha1="25438f55fc6d906a0e72f30b21487541430ede43">
         <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.0.1_4594b4228a7810e21f5dc74ae9ddc0837c66186a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94ba691efc31bf53264db0716d9c9ec03843ea31">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-25.0.0_20f7f70b4198d500d177e87410e919efa1439656/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_299cd1b17d3128c5e50cf9a47e3f354489d7035d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_5352ba352b7430999d5e9166d7e0ef991ade7fe8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ivan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/ivan/Downloads/ShoppingList/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.2.2_414fecd9eca5d3dbaa0e71fb6b0fd7c5f6c79964/classes.dex" />
     </item>
 
 </items>

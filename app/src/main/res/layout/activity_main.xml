@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,144 +14,66 @@
     tools:context="fi.aalto.msp2017.shoppinglist.MainActivity">
 
     <TextView
-        android:id="@+id/tvSocial"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
         android:textColor="#000000"
-        android:text="You can sign up with your own accounts"/>
+        android:text="LOGO" />
 
-    <LinearLayout
-        android:id="@+id/layoutSocial"
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:textColor="#000000"
+        android:text="Sign In"
+        android:layout_below="@+id/layoutSignup"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/layoutSignup"
+        android:layout_alignStart="@+id/layoutSignup" />
+
+    <TextView
+        android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tvSocial"
-        android:layout_marginTop="7dp">
-
-        <ImageView
-            android:id="@+id/imgFacebook"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
-
-
-        <ImageView
-            android:id="@+id/imgGoogle"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_above="@+id/layoutSignup"
-        android:layout_marginBottom="10dp">
-
-        <TextView
-            android:id="@+id/tvList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:text="or with List application account"/>
-
-        <LinearLayout
-            android:id="@+id/layoutSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-            <Switch
-                android:id="@+id/switchLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"/>
-
-            <TextView
-                android:id="@+id/tvSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:textColor="#000000"
-                android:text="I don't have List account"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutLogin"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/btnSignup"
-        android:layout_marginBottom="15dp">
-
-        <EditText
-            android:id="@+id/etLoginEmail"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textAlignment="center"
-            android:background="@drawable/etfields"
-            android:padding="10dp"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/etLoginPassword"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="textPassword"
-            android:textAlignment="center"
-            android:background="@drawable/etfields"
-            android:padding="10dp"
-            android:hint="Password"/>
-
-
-
-    </LinearLayout>
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginTop="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="Don't have an account?" />
 
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
         android:background="@drawable/buttons"
         android:textColor="#000000"
-        android:text="Sign up"/>
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginTop="70dp"
+        android:text="Sign Up"/>
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:visibility="invisible"
-        android:layout_width="250dp"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fbButton"
+        android:layout_below="@id/btnSignup"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
-        android:background="@drawable/buttons"
-        android:textColor="#000000"
-        android:text="Sign in"/>
+        facebook:com_facebook_tooltip_mode="never_display" />
 
     <LinearLayout
         android:id="@+id/layoutSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignBottom="@+id/layoutLogin"
-        android:layout_alignLeft="@+id/layoutLogin"
-        android:layout_alignStart="@+id/layoutLogin">
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/logo"
+        android:layout_alignLeft="@+id/btnSignup"
+        android:layout_alignStart="@+id/btnSignup">
 
         <EditText
             android:id="@+id/etSignupEmail"
@@ -173,28 +96,26 @@
             android:padding="10dp"
             android:hint="Password"/>
 
-        <EditText
-            android:id="@+id/etSignupFirstname"
-            android:layout_width="250dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:background="@drawable/etfields"
-            android:padding="10dp"
-            android:hint="First name"/>
+            android:layout_gravity="right"
+            android:text="Password reset"
+            android:textColor="#0458ff"
+            android:id="@+id/passwordReset"
+            android:clickable="true"/>
 
-        <EditText
-            android:id="@+id/etSignupLastname"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:background="@drawable/etfields"
-            android:padding="10dp"
-            android:hint="Last name"/>
 
     </LinearLayout>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/gButton"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/button_width"
+        android:layout_below="@+id/fbButton"
+        android:text="@string/common_signin_button_text_long"
+        android:layout_centerHorizontal="true"/>
+
+
 
 </RelativeLayout>

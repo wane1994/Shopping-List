@@ -26,13 +26,16 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -40,6 +43,7 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DatabaseReference;
@@ -47,24 +51,20 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Arrays;
 
-import static fi.aalto.msp2017.shoppinglist.R.id.etLoginEmail;
-import static fi.aalto.msp2017.shoppinglist.R.id.etLoginPassword;
-import static fi.aalto.msp2017.shoppinglist.R.id.tvSwitch;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText emailField, passwordField, signup_firstName, signup_lastName, login_email, login_password;
-    private EditText login_Firstname, login_Lastname;
+    private EditText login_email, login_password;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
     DatabaseReference mDatabase;
     GoogleApiClient mGoogleApiClient;
     CallbackManager mCallbackManager;
     ProgressDialog mProgress;
-    Switch switchLogin;
-    TextView tvSocial, tvSwitch;
-    Button btnLogin, btnSignup;
+    Button btnSignup, btnSignin;
+    SignInButton btnG;
+    TextView reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,67 +76,32 @@ public class MainActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("users");
         mCallbackManager = CallbackManager.Factory.create();
 
-        emailField = (EditText)findViewById(R.id.etSignupEmail);
-        passwordField = (EditText) findViewById(R.id.etSignupPassword);
-
-
-        tvSocial=(TextView) findViewById(R.id.tvSocial);
-        tvSwitch=(TextView) findViewById(R.id.tvSwitch);
         btnSignup=(Button) findViewById(R.id.btnSignup);
-        btnLogin=(Button) findViewById(R.id.btnLogin);
+        btnSignin=(Button) findViewById(R.id.btnSignIn);
         login_email=(EditText)findViewById(R.id.etSignupEmail);
         login_password=(EditText) findViewById(R.id.etSignupPassword);
-        login_Firstname = (EditText) findViewById(R.id.etSignupFirstname);
-        login_Lastname = (EditText) findViewById(R.id.etSignupLastname);
+        reset=(TextView) findViewById(R.id.passwordReset);
+        //btnFB=(Button) findViewById(R.id.fbButton);
+        btnG=(SignInButton) findViewById(R.id.gButton);
+        TextView textView = (TextView) btnG.getChildAt(0);
+        textView.setText("Continue with Google");
+        LoginButton mFacebookSignInButton = (LoginButton) findViewById(R.id.fbButton);
+        mFacebookSignInButton.setReadPermissions("email", "public_profile");
 
 
-        ImageView imgFacebook = (ImageView)findViewById(R.id.imgFacebook);
-        imgFacebook.setImageResource(R.drawable.facebook_image);
-        ImageView imgGoogle = (ImageView) findViewById(R.id.imgGoogle);
-        imgGoogle.setImageResource(R.drawable.google_image);
-
-
-       /* switchLogin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    tvSocial.setText("You can sign in with your own accounts");
-                    tvSwitch.setText("I have List account");
-                    layoutSignup.setVisibility(View.INVISIBLE);
-                    btnSignup.setVisibility(View.INVISIBLE);
-                    layoutLogin.setVisibility(View.VISIBLE);
-                    btnLogin.setVisibility(View.VISIBLE);
-                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT);
-                    params.addRule(RelativeLayout.ABOVE, R.id.layoutLogin);
-                    layoutList.setLayoutParams(params);
-
-                } else {
-                    tvSocial.setText("You can sign up with your own accounts");
-                    tvSwitch.setText("I don't have List account");
-                    layoutLogin.setVisibility(View.INVISIBLE);
-                    btnLogin.setVisibility(View.INVISIBLE);
-                    layoutSignup.setVisibility(View.VISIBLE);
-                    btnSignup.setVisibility(View.VISIBLE);
-                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT);
-                    params.addRule(RelativeLayout.ABOVE, R.id.layoutSignup);
-                    layoutList.setLayoutParams(params);
-                }
-            }
-
-        });*/
 
         //attaching listener to LogIn button
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                emailSignup();
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         });
 
         //attaching listener to LogIn button
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+           btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 emailLogin();
@@ -162,8 +127,9 @@ public class MainActivity extends AppCompatActivity {
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
+
         // FACEBOOK Sign It integration
-        LoginManager.getInstance().registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+        mFacebookSignInButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
@@ -182,6 +148,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*mFacebookSignInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginManager.getInstance()
+                        .logInWithReadPermissions(MainActivity.this, Arrays.asList("email", "public_profile"));
+            }
+        });*/
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -194,15 +168,9 @@ public class MainActivity extends AppCompatActivity {
         };
 
 
-        imgFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginManager.getInstance()
-                        .logInWithReadPermissions(MainActivity.this, Arrays.asList("email", "public_profile"));
-            }
-        });
 
-        imgGoogle.setOnClickListener(new View.OnClickListener() {
+
+        btnG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mProgress = ProgressDialog.show(MainActivity.this, "Please wait...",null,true,true);
@@ -210,43 +178,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = login_email.getText().toString();
+                if(TextUtils.isEmpty(email)) {
+                    Toast.makeText(MainActivity.this, "Please enter the email", Toast.LENGTH_SHORT).show();
 
-    //method to SIGN UP with email:password
-    private void emailSignup() {
-
-        String email = login_email.getText().toString();
-        String password = login_password.getText().toString();
-        final String firstname = login_Firstname.getText().toString();
-        final String secondname = login_Lastname.getText().toString();
-
-        if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(firstname) || TextUtils.isEmpty(secondname)) {
-            Toast.makeText(MainActivity.this, "Fill all the fields", Toast.LENGTH_SHORT).show();
-
-        } else {
-            mProgress = ProgressDialog.show(MainActivity.this, "Please wait...",null,true,true);
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-
-                    if(task.isSuccessful()) {
-                        String userId = mAuth.getCurrentUser().getUid();
-                        DatabaseReference currentUserDb = mDatabase.child(userId);
-                        currentUserDb.child("name").setValue(firstname + " " + secondname);
-                        Toast.makeText(MainActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                        mProgress.dismiss();
-                        Intent intent = new Intent(MainActivity.this, AccountActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-
-                    } else {
-                        Toast.makeText(MainActivity.this, "Your email is already registered or your password is less than 6 symbols", Toast.LENGTH_SHORT).show();
-                        mProgress.dismiss();
-                    }
                 }
-            });
-        }
+                else{
+                mAuth.sendPasswordResetEmail(email)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Log.d("D", "Email sent.");
+                                    Toast.makeText(MainActivity.this, "Email with password reset was sent", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                    Toast.makeText(MainActivity.this, "Your email is not in our list", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }}
+        });
+
     }
+
+
 
     //method to LOG IN with email:password
     private void emailLogin(){
@@ -264,10 +222,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if (task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                         mProgress.dismiss();
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                        startActivity(intent);
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        if (user.isEmailVerified()) {
+                            Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                            Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, "Verify your email", Toast.LENGTH_LONG).show();
+                        }
 
                     } else {
                         Toast.makeText(MainActivity.this, "Wrong email or password", Toast.LENGTH_SHORT).show();
